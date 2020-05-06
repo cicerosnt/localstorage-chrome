@@ -206,3 +206,32 @@ function pesquisarSDespesa(){
 
   this.carregaListaDespesa(despesas, true);
 }
+
+var data = new Date();
+numDia = data.getDate();
+numMes = data.getMonth() +1;
+numAno = data.getFullYear();
+numDiasMes = new Date(numAno, numMes, 0).getDate();
+
+function carregaAno(){
+  
+  for(let i=5;i>=0; i--){
+    let ano = document.getElementById("ano");
+
+    let opt0 = document.createElement("option");
+    opt0.value = data.getFullYear() + i;
+    opt0.text = data.getFullYear() + i;
+    ano.add(opt0, ano.options[0]);
+  }
+}
+
+function carregaDia(){
+  for(let i=numDiasMes;i >= numDia; i--){
+    let dia = document.getElementById("dia");
+    let opt0 = document.createElement("option");
+    opt0.value = parseFloat(i);
+    opt0.text = i;
+    dia.add(opt0, dia.options[0]);
+  }
+}
+
