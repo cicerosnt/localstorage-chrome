@@ -1,15 +1,15 @@
+<!DOCTYPE html>
 <html>
-	<head>
-    <meta charset="utf-8" />
-		<title>Orçamento pessoal</title>
-
-		<!-- Bootstrap início -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <!-- Bootstrap fim -->
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Cadastro | Orçamento pessoal</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
     <!-- Font Awesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
@@ -20,12 +20,12 @@
   <body onload="carregaAno(), carregaDia()">
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary mb-5 sticky-top ">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-secondary mb-5 sticky-top ">
       <div class="container">
-        <a class="navbar-brand border rounded-circle pl-2 pb-1 pt-1 pr-2" href="#">
+        <a class="navbar-brand border rounded pl-2 pb-1 pt-1 pr-2" href="#">
           <i class="fas fa-dollar-sign"></i>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler border border-1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -46,21 +46,21 @@
     <div class="container">
       <div class="row d-flex align-items-center">
         <div class="col mb-5">
-          <h1 class="display-lg-4 display-sm-1">Registro de nova despesa</h1>
+          <h1 class="display-lg-4">Registro de nova despesa</h1>
         </div>
       </div>
 
       <div class="row d-flex align-items-center">
-        <div class="col-md-8">
-          <div class="row mt-2 mb-2">
+        <div class="col-sm-8">
+          <div class="row mt-2 mb-2 d-flex">
             
-            <div class="col-md-4 mb-2">
+            <div class="col-sm-4 mb-2">
               <select class="form-control" id="ano">
                 <option value="">Ano</option>
               </select>
             </div>
 
-            <div class="col-md-4 mb-2">
+            <div class="col-sm-4 mb-2">
               <select class="form-control" id="mes">
                 <option value="">Mês</option>
                 <option value="1">Janeiro</option>
@@ -78,13 +78,13 @@
               </select>
             </div>
 
-            <div class="col-md-4 mb-2">
+            <div class="col-sm-4 mb-2">
               <select class="form-control" id="dia">
                 <option value="">Dia</option>
               </select>
             </div>
 
-            <div class="col-md-8">
+            <div class="col-sm-8 mb-2">
               <select class="form-control" id="tipo">
                 <option value="">Tipo</option>
                 <option value="1">Alimentação</option>
@@ -95,19 +95,19 @@
               </select>
             </div>
 
-            <div class="col-md-4 mt-2">
+            <div class="col-sm-4 mb-2">
               <input type="text" class="form-control" placeholder="Valor" id="valor" />
             </div>
 
-            <div class="col-md-12 mt-2">
+            <div class="col-sm-12">
               <input type="text" class="form-control" placeholder="Descrição" id="descricao" />
             </div>
 
           </div>
         </div>
-        <div class="col-md-4 d-flex justify-content-center">
+        <div class="col-sm-4 d-flex justify-content-center">
           <div class="row">
-            <div class="col-md-12 m-3">
+            <div class="col-sm-12 m-3">
               <button type="button" class="btn btn-secondary btn-lg" onclick="cadatrarDespesa()">
                 <i class="fas fa-save"></i> Salvar
               </button>

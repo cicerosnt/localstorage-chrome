@@ -1,15 +1,15 @@
-<html>
-	<head>
-    <meta charset="utf-8" />
-		<title>Consulta | Orçamento pessoal</title>
-
-		<!-- Bootstrap início -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <!-- Bootstrap fim -->
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Consulta | Orçamento pessoal</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
     <!-- Font Awesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
@@ -20,47 +20,47 @@
   <body onload="carregaListaDespesa(), carregaAno(), carregaDia()">
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary mb-5 sticky-top ">
-      <div class="container">
-        <a class="navbar-brand border rounded-circle pl-2 pb-1 pt-1 pr-2" href="#">
-          <i class="fas fa-dollar-sign"></i>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <nav class="navbar navbar-expand-sm navbar-dark bg-secondary mb-5 sticky-top ">
+        <div class="container">
+          <a class="navbar-brand border rounded pl-2 pb-1 pt-1 pr-2" href="#">
+            <i class="fas fa-dollar-sign"></i>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Cadastro</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="consulta.html">Consulta</a>
-            </li>
-          </ul>
-          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Cadastro</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="consulta.html">Consulta</a>
+              </li>
+            </ul>
+            
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
 
     <div class="container">
       <div class="row mb-5">
         <div class="col">
-          <h1 class="display-sm-2">Consulta de despesas</h1>
+          <h1 class="display-lg-4">Consulta de despesas</h1>
         </div>
       </div>
 
       <div class="row d-flex align-items-center">
-        <div class="col-md-6">
+        <div class="col-sm-6">
           <div class="row">
 
-            <div class="col-md-4 mb-2 mt-2">
+            <div class="col-4 col-sm-4 mb-2 mt-2">
               <select class="form-control" id="ano">
                 <option value="">Ano</option>
               </select>
             </div>
   
-            <div class="col-md-4 mb-2 mt-2">
+            <div class="col-4 col-sm-4 mb-2 mt-2">
               <select class="form-control" id="mes">
                 <option value="">Mês</option>
                 <option value="1">Janeiro</option>
@@ -78,13 +78,13 @@
               </select>
             </div>
 
-            <div class="col-md-4 mb-2 mt-2">
+            <div class="col-4 col-md-4 mb-2 mt-2">
               <select class="form-control" id="dia">
                 <option value="">Dia</option>
               </select>
             </div>
 
-            <div class="col-md-8 mb-2">
+            <div class="col-8 col-md-8 mb-2">
               <select class="form-control" id="tipo">
                 <option value="">Tipo</option>
                 <option value="1">Alimentação</option>
@@ -95,41 +95,33 @@
               </select>
             </div>
 
-            <div class="col-md-4 mb-2">
+            <div class="col-4 col-md-4 mb-2">
               <input type="text" class="form-control" placeholder="Valor" id="valor" />
             </div>
 
-            <div class="col-md-12 mb-2">
+            <div class="col-12 col-md-12 mb-2">
               <input type="text" class="form-control" placeholder="Descrição" id="descricao" />
             </div>
     
           </div>
         </div>
 
-        <div class="col-md-6 d-flex justify-content-center mt-4">
-          
-          <div class="row">
+        <div class="col-sm-6 d-flex justify-content-center mt-4">
 
-            <div class="col col-md-6">
-              <button class="btn btn-light btn-lg">
+              <button class="btn btn-light btn-lg ml-2">
                 <i class="fas fa-eraser"></i> Limpar
               </button>
-            </div>
-
-            <div class="col col-md-6">    
-              <button type="button" class="btn btn-secondary btn-lg" onclick="pesquisarSDespesa()">
+  
+              <button type="button" class="btn btn-secondary btn-lg mr-2" onclick="pesquisarSDespesa()">
                 <i class="fas fa-search"></i> Buscar
               </button>
-            </div>
-
-          </div>
-
+           
         </div>
 
       </div>
 
       <div class="row mt-5">
-        <div class="col">
+        <div class="col-sm-12">
           <table class="table table-bordered table-hover" >
             <thead class="bg-secondary text-white text-center">
               <tr>
@@ -139,7 +131,7 @@
                 <th>Valor</th>
                 <th>Excluir</th>
               </tr>
-            </thead>
+            </thead >
 
             <tbody id="listaDespesas">
             </tbody>
