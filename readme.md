@@ -1,4 +1,4 @@
-# <img src="dollar-sign.svg" width="45" align="left"> Persistindo dados no "localStorage" do Chrome com JavaScript - Cadastro de Despesa
+## <img src="dollar-sign.svg" width="45" align="left"> Persistindo dados no "localStorage" do Chrome com JavaScript - Cadastro de Despesa
 
 > Utilizando o localStorage do Google Chrome para persistir dados
 
