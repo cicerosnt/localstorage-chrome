@@ -118,12 +118,7 @@ function cadatrarDespesa(){
     document.getElementById('modal_btn').innerHTML = 'Ok!';
     document.getElementById('modal_btn').className = 'btn btn-success';
     $('#modalDespesa').modal('show');
-    ano.value = '' 
-		mes.value = ''
-		dia.value = ''
-		tipo.value = ''
-		descricao.value = ''
-		valor.value = ''
+    limparCampos();
   }else{
     document.getElementById('modal_titulo').innerHTML = 'Erro!';
     document.getElementById('modal_titulo').className = 'text-danger';
@@ -239,5 +234,14 @@ function carregaDia(){
     opt0.text = i;
     dia.add(opt0, dia.options[0]);
   }
+}
+
+function limparCampos(){
+  ano.value = '' 
+  mes.value = ''
+  dia.value = ''
+  tipo.value = ''
+  descricao.value = ''
+  valor.value = ''
 }
 
